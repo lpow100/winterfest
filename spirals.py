@@ -1,40 +1,40 @@
 import turtle
 
-def sipral1():
-    from itertools import cycle
+from itertools import cycle
 
 
-    class spin:
+class spin:
 
-        def __init__(self, len: int, rot: int) -> None:
-            self.__mov__ = len
-            self.__rot__ = rot
+    def __init__(self, len: int, rot: int) -> None:
+        self.__mov__ = len
+        self.__rot__ = rot
 
-        def move(self):
-            return self.__mov__
+    def move(self):
+        return self.__mov__
 
-        def rotate(self):
-            return self.__rot__
+    def rotate(self):
+        return self.__rot__
 
 
-    class spirolateral:
+class spirolateral:
 
-        def __init__(self, size: int, rotation: int, flips: list[int] = []):
-            self.rotation = rotation
-            self.flips = flips
-            self.turns = cycle(range(1, size + 1))
+    def __init__(self, size: int, rotation: int, flips: list[int] = []):
+        self.rotation = rotation
+        self.flips = flips
+        self.turns = cycle(range(1, size + 1))
 
-        def next(self):
-            pos = next(self.turns)
-            if pos in self.flips:
-                if self.rotation + 180 > 360:
-                    return spin(pos, self.rotation - 180)
-                else:
-                    return spin(pos, self.rotation + 180)
+    def next(self):
+        pos = next(self.turns)
+        if pos in self.flips:
+            if self.rotation + 180 > 360:
+                return spin(pos, self.rotation - 180)
             else:
-                return spin(pos, self.rotation)
+                return spin(pos, self.rotation + 180)
+        else:
+            return spin(pos, self.rotation)
 
 
+def sipral1():
     # Fullscreen the canvas
     screen = turtle.Screen()
     screen.setup(1.0, 1.0)
