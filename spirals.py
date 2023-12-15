@@ -56,4 +56,6 @@ def sipral1():
     screen.clear()
     turtle.hideturtle()
 
+
+#all the funcs to run if you add one make sure to put it here
 funcs = [sipral1]

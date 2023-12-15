@@ -1,5 +1,4 @@
 import spirals
-import turtle
 
 
 while True:
