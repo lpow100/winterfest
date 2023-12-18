@@ -152,6 +152,7 @@ def nick(turt, screen) -> None:
         if x_start == round(x, 0) and y_start == round(y, 0) and turt.heading() == 0:
             break
 
+
 def samuel(turt, screen) -> None:
     # Begin!
     turt.pensize(2)
