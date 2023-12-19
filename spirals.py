@@ -1,8 +1,7 @@
+import random
 import turtle
-
 from itertools import cycle
 
-import random
 
 class spin:
     def __init__(self, len: int, rot: int) -> None:
@@ -50,13 +49,15 @@ def sipral1(turt: turtle.Turtle, screen: turtle.Screen) -> None:
             break
 
 
-def logan(turt: turtle.Turtle,screen:turtle.Screen) -> None:
+def logan(turt: turtle.Turtle, screen: turtle.Screen) -> None:
     # Begin!
     turt.speed(0)
     turt.pensize(1)
     sel = 0
     turtle.colormode(255)
-    turt.pencolor(random.randint(30,255),random.randint(30,255),random.randint(30,255))
+    turt.pencolor(
+        random.randint(30, 255), random.randint(30, 255), random.randint(30, 255)
+    )
 
     w = 1
 
@@ -67,7 +68,11 @@ def logan(turt: turtle.Turtle,screen:turtle.Screen) -> None:
             w += 3
             sel += 1
             if sel % 10 == 0:
-                turt.pencolor(random.randint(30,255),random.randint(30,255),random.randint(30,255))
+                turt.pencolor(
+                    random.randint(30, 255),
+                    random.randint(30, 255),
+                    random.randint(30, 255),
+                )
 
 
 def zeb(turt: turtle.Turtle, screen) -> None:
@@ -455,4 +460,9 @@ funcs = [
     grace,
     joel,
     jake,
+    ethan_nobel,
+    ethan_nobel2,
+    sanvi,
+    maya,
+    jack,
 ]
