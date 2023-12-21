@@ -4,6 +4,7 @@ from itertools import cycle
 
 import random
 
+
 class spin:
     def __init__(self, len: int, rot: int) -> None:
         self.__mov__ = len
