@@ -96,7 +96,7 @@ def zeb(turt: turtle.Turtle, screen) -> None:
             break
 
 
-def nick(turt, screen) -> None:
+def nick(turt: turtle.Turtle, screen: turtle.Screen) -> None:
     # Begin!
     turt.pensize(3)
 
@@ -116,8 +116,8 @@ def nick(turt, screen) -> None:
             break
 
 
-def samuel(turt, screen) -> None:
-    # Begin!
+def samuel(turt: turtle.Turtle, screen: turtle.Screen) -> None:
+    # egin!
     turt.pensize(2)
     turt.penup()
     turt.setposition(0, -200)
@@ -136,7 +136,7 @@ def samuel(turt, screen) -> None:
             break
 
 
-def cynthia_velazquez(turt, screen) -> None:
+def cynthia_velazquez(turt: turtle.Turtle, screen: turtle.Screen) -> None:
     # Begin!
     turt.pensize(4)
     turt.penup()
@@ -155,7 +155,7 @@ def cynthia_velazquez(turt, screen) -> None:
             break
 
 
-def xoe(turt, screen) -> None:
+def xoe(turt: turtle.Turtle, screen: turtle.Screen) -> None:
     # Begin!
     turt.pensize(8)
 
@@ -175,7 +175,7 @@ def xoe(turt, screen) -> None:
             break
 
 
-def tim(turt, screen):
+def tim(turt: turtle.Turtle, screen: turtle.Screen):
     # Begin!
     turt.pensize(2)
     turt.speed(0)
@@ -195,7 +195,7 @@ def tim(turt, screen):
             break
 
 
-def sai(turt, screen):
+def sai(turt: turtle.Turtle, screen: turtle.Screen):
     # Begin!
     turt.pensize(10)
     sides = cycle([1, 2, 3, 4, 5])
@@ -215,10 +215,8 @@ def sai(turt, screen):
             break
 
 
-def ethan_meyer(turt, screen):
+def ethan_meyer(turt: turtle.Turtle, screen: turtle.Screen):
     screen.bgcolor("black")
-
-    # Begin!
     turt.speed(0)
     turt.shape("turtle")
     turt.penup()
@@ -238,7 +236,7 @@ def ethan_meyer(turt, screen):
             break
 
 
-def yas(turt, screen):
+def yas(turt: turtle.Turtle, screen: turtle.Screen):
     # begin
     sides = cycle([0, 2, 3, 2.2, 3, 1])
     colors = cycle(["purple", "blue", "purple", "blue", "purple"])
@@ -256,7 +254,7 @@ def yas(turt, screen):
             break
 
 
-def grace(turt, screen):
+def grace(turt: turtle.Turtle, screen: turtle.Screen):
     # Begin!
     turt.pensize(5)
     turt.speed(0)
@@ -276,7 +274,7 @@ def grace(turt, screen):
             break
 
 
-def joel(turt, screen):
+def joel(turt: turtle.Turtle, screen: turtle.Screen):
     # Fullscreen the canvas
     screen.bgcolor("#222021")
     # Begin!
@@ -300,7 +298,7 @@ def joel(turt, screen):
             break
 
 
-def jake(turt, screen):
+def jake(turt: turtle.Turtle, screen: turtle.Screen):
     # Begin!
     turt.pensize(5)
     turt.speed(0)
@@ -322,7 +320,7 @@ def jake(turt, screen):
             break
 
 
-def ethan_nobel(turt, screen):
+def ethan_nobel(turt: turtle.Turtle, screen: turtle.Screen):
     screen.bgcolor("#5F4BB6")
 
     # Begin!
@@ -345,7 +343,7 @@ def ethan_nobel(turt, screen):
             break
 
 
-def ethan_nobel2(turt, screen):
+def ethan_nobel2(turt: turtle.Turtle, screen: turtle.Screen):
     screen.bgcolor("#c30022")
     screen.tracer(0, 0)
     # Begin!
@@ -379,7 +377,7 @@ def ethan_nobel2(turt, screen):
     screen.tracer(1, 1)
 
 
-def sanvi(turt, screen):
+def sanvi(turt: turtle.Turtle, screen: turtle.Screen):
     screen.bgcolor("#BFFFA9")
 
     # Begin!
@@ -404,7 +402,7 @@ def sanvi(turt, screen):
             distance += 3
 
 
-def maya(turt, screen):
+def maya(turt: turtle.Turtle, screen: turtle.Screen):
     turt.speed(0)
     turt.pensize(3)
     turt.penup()
@@ -423,9 +421,35 @@ def maya(turt, screen):
             break
 
 
-def jack(turt, screen):
+def zeb2(turt: turtle.Turtle, screen: turtle.Screen):
+    # Begin!
+    screen.bgcolor("black")
+    turt.pensize(7)
+    turt.speed(0)
+    turt.shape("circle")
+    turt.color("#39E3CB")
+    turt.penup()
+    turt.setposition(100, 0)
+    turt.pendown()
+
+    sides = cycle([7, 9, 3, 5, 2])
+    x_start, y_start = turt.position()
+    while True:
+        side = next(sides)
+        turt.forward(20 * side)
+        turt.left(150)
+        x, y = turt.position()
+        if x_start == round(x, 0) and y_start == round(y, 0) and turt.heading() == 0:
+            break
+
+
+def jack(turt: turtle.Turtle, screen: turtle.Screen):
     turt.speed(0)
     screen.tracer(0, 0)
+    turt.pensize(3)
+    turt.penup()
+    turt.setposition(-300, -225)
+    turt.pendown()
     sides = cycle([9, 7, 6, 2, 8, 3, 3, 4, 6, 5, 3, 11, 4])
     colors = cycle(["red", "orange", "yellow", "green", "blue", "purple"])
     x_start, y_start = turt.position()
@@ -433,7 +457,7 @@ def jack(turt, screen):
     while True:
         turt.color(next(colors))
         side = next(sides)
-        turt.forward(30 * side)
+        turt.forward(45 * side)
         turt.left(69)
         x, y = turt.position()
         if x_start == round(x, 0) and y_start == round(y, 0):
@@ -444,9 +468,133 @@ def jack(turt, screen):
     screen.tracer(1, 1)
 
 
+def peyton(turt: turtle.Turtle, screen: turtle.Screen):
+    # Begin!
+    turt.pensize(5)
+    turt.speed(0)
+    turt.penup()
+    turt.setposition(-200, 250)
+    turt.pendown()
+
+    sides = cycle([4, 3, 2, 3, 4])
+    colors = cycle(["blue", "black", "light blue", "dark blue"])
+    x_start, y_start = turt.position()
+    while True:
+        side = next(sides)
+        turt.color(next(colors))
+        turt.forward(24 * side)
+        turt.right(75)
+        x, y = turt.position()
+        if x_start == round(x, 0) and y_start == round(y, 0) and turt.heading() == 0:
+            break
+
+
+def lylah(turt: turtle.Turtle, screen: turtle.Screen):
+    turt.pensize(7)
+
+    turt.penup()
+    turt.setposition(-100, -105)
+    turt.pendown()
+    sides = cycle([3, 5, 7, 6, 9, 10, 8])
+    colors = cycle(["#9d0208", "#006400", "#9d0208", "#006400", "#9d0208", "#006400"])
+    x_start, y_start = turt.position()
+    while True:
+        side = next(sides)
+        turt.color(next(colors))
+        turt.forward(30 * side)
+        turt.left(90)
+        x, y = turt.position()
+        if x_start == round(x, 0) and y_start == round(y, 0) and turt.heading() == 0:
+            break
+
+
+def owen(turt: turtle.Turtle, screen: turtle.Screen):
+    # Begin!
+    turt.pensize(5)
+    turt.speed(0)
+    turt.penup()
+    turt.setposition(-200, -100)
+    turt.pendown()
+    sides = cycle([3, 2, 2, 3])
+    colors = cycle(["#0B1D51", "#5E2BFF", "#343E3D", "#F5853F", "#E7DE8E"])
+    x_start, y_start = turt.position()
+    while True:
+        side = next(sides)
+        turt.color(next(colors))
+        turt.forward(40 * side)
+        turt.left(100)
+        x, y = turt.position()
+        if x_start == round(x, 0) and y_start == round(y, 0) and turt.heading() == 0:
+            break
+
+
+def adaline(turt: turtle.Turtle, screen: turtle.Screen):
+    # Begin!
+    turt.pensize(4)
+    turt.shape("turtle")
+    turtle.bgcolor("black")
+    sides = cycle([1, 2, 3, 4, 5, 6, 7, 8, 9])
+    colors = cycle(["#D24343", "#3AA928", "#A9284A", "#054D1D", "#751414", ""])
+    turt.penup()
+    turt.setposition(-7, -105)
+    turt.pendown()
+    x_start, y_start = turt.position()
+    while True:
+        side = next(sides)
+        turt.color(next(colors))
+        turt.forward(19 * side)
+        turt.left(114)
+        x, y = turt.position()
+        if x_start == round(x, 0) and y_start == round(y, 0) and turt.heading() == 0:
+            break
+
+
+def stella(turt: turtle.Turtle, screen: turtle.Screen):
+    turt.pensize(8)
+    sides = cycle([6, 7, 8, 9, 2])
+    colors = cycle(["#00BD48", "#8012D1", "#30B3FD", "#123BD1", "#12D187"])
+    x_start, y_start = turt.position()
+    while True:
+        side = next(sides)
+        turt.color(next(colors))
+        turt.forward(30 * side)
+        turt.left(90)
+        x, y = turt.position()
+        if x_start == round(x, 0) and y_start == round(y, 0) and turt.heading() == 0:
+            break
+
+
+def daisy(turt: turtle.Turtle, screen: turtle.Screen):
+    turt.pensize(7)
+    turt.shape("turtle")
+    turt.speed(0)
+
+    turt.penup()
+    turt.setposition(-150, 175)
+    turt.pendown()
+    sides = cycle([4, 7, 9, 4, 7, 9, 4, 7, 9])
+    colors = cycle(["#FFDB00", "#7BDFF2", "#FF6F59"])
+    x_start, y_start = turt.position()
+    while True:
+        side = next(sides)
+        turt.color(next(colors))
+        turt.forward(15 * side)
+        turt.left(126)
+        x, y = turt.position()
+        if x_start == round(x, 0) and y_start == round(y, 0) and turt.heading() == 0:  # noqa: E501
+            break
+
+
+# def adaline(turt: turtle.Turtle, screen: turtle.Screen):
 # all the funcs to run if you add one make sure to put it here
 funcs = [
+    peyton,
+    lylah,
     sipral1,
+    adaline,
+    daisy,
+    stella,
+    owen,
     logan,
     zeb,
     nick,
@@ -465,4 +613,5 @@ funcs = [
     sanvi,
     maya,
     jack,
+    zeb2,
 ]
